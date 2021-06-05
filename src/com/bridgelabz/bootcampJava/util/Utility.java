@@ -1,5 +1,7 @@
 package com.bridgelabz.bootcampJava.util;
 
+import java.io.IOException;
+
 public class Utility {
 
 	//Day-1
@@ -67,4 +69,14 @@ public class Utility {
 		System.out.println("Min     = " + min);
 		System.out.println("Max     = " + max);
 	}
+
+
+	public static void powerOf(int n) {
+		for(int i = 1; i<=n;i++) {
+			System.out.println(Math.pow(2,i));
+		}
+	}
+
+
+
 }
