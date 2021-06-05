@@ -1,11 +1,8 @@
 package com.bridgelabz.bootcampJava.util;
 
-import java.io.IOException;
-
 public class Utility {
 
 	//Day-1
-
 	public static void mathOpt(int a, int b, int c) {
 		//int a=10, b=20, c=30;
 		int operation1= a + b * c;
@@ -47,6 +44,7 @@ public class Utility {
 		System.out.println("Sum of two Dice :: " +sum);
 	}
 
+	//Day-2
 	public static void randomMinMax(){
 		int number = 5;
 		double random1 = Math.random();
@@ -77,6 +75,26 @@ public class Utility {
 		}
 	}
 
+	
+	public void flipCoin(int numberOfTimesFlipCount) {
+		int percentageOfHeads, percentageOfTails;
+		int headsCounts = 0, tailsCounts = 0;
+		for (int i = 0; i < numberOfTimesFlipCount; i++) {
+			if (Math.random() > 0.5) {
+				headsCounts++;
+			} else {
+				tailsCounts++;
+			}
+		}
+		System.out.println("heads : " + headsCounts);
+		System.out.println("tails : " + tailsCounts);
+		// calculation of percentage
+		percentageOfHeads = headsCounts * 100 / numberOfTimesFlipCount;
+		percentageOfTails = tailsCounts * 100 / numberOfTimesFlipCount;
+
+		System.out.println("Percentage for heads : " + percentageOfHeads);
+		System.out.println("Percentage for tails : " + percentageOfTails);
+	}
 
 
 }
