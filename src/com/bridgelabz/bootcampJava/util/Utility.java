@@ -116,6 +116,38 @@ public class Utility {
 		distance = Math.sqrt(sumOfPowerXY);
 		return distance;
 	}
+	
+	/*
+	 * Purpose: Method is written for finding delta for Quadratic Equation
+	 * @return delta finding delta using formula
+	 */
+	public double FindDelta(int a, int b, int c) {
+		int delta = (b * b) - (4 * a * c);
+		return delta;
+	}
+	
+	/*
+	 * Purpose: Method is written for finding first Quadratic Equation
+	 * @param delta delta of a b and c
+	 * @return returns of quadratic equation answer
+	 */
+	public double QuadraticEquation1(int a, int b, double delta) {
+		double absDelta = Math.abs(delta);
+		double sqrtDelta = Math.sqrt(absDelta);
+		double equation1 = (-b + sqrtDelta) / (2 * a);
+		return equation1;
+	}
 
+	/*
+	 * Purpose: Method is written for finding second Quadratic Equation
+	 * @param delta delta of a b and c
+	 * @return returns of quadratic equation answer
+	 */
+	public double QuadraticEquation2(int a, int b, double delta) {
+		double absDelta = Math.abs(delta);
+		double sqrtDelta = Math.sqrt(absDelta);
+		double equation2 = (-b - sqrtDelta) / (2 * a);
+		return equation2;
+	}
 }
 
