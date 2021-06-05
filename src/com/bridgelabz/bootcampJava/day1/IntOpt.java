@@ -1,7 +1,6 @@
 package com.bridgelabz.bootcampJava.day1;
 
 import java.util.Scanner;
-
 import com.bridgelabz.bootcampJava.util.Utility;
 
 /*
