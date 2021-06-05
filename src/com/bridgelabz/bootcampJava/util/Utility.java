@@ -96,5 +96,12 @@ public class Utility {
 		System.out.println("Percentage for tails : " + percentageOfTails);
 	}
 
-
+	public static void harmonicSeries(int num) {
+		for ( int count = 1 ; count<= num ; count++ ) {
+			System.out.print(" 1/" +count+ " + ");
+		
+		}
+		
+	}
+	
 }
