@@ -75,7 +75,7 @@ public class Utility {
 		}
 	}
 
-	
+
 	public void flipCoin(int numberOfTimesFlipCount) {
 		int percentageOfHeads, percentageOfTails;
 		int headsCounts = 0, tailsCounts = 0;
@@ -99,9 +99,23 @@ public class Utility {
 	public static void harmonicSeries(int num) {
 		for ( int count = 1 ; count<= num ; count++ ) {
 			System.out.print(" 1/" +count+ " + ");
-		
+
 		}
-		
+
 	}
-	
+
+
+	public double EuclideanDistance(int x1, int y1, int x2, int y2) {
+		double distance, powerofx, powerofy, sumOfPowerXY;
+		int x, y;
+		x = x2 - x1;
+		y = y2 - y1;
+		powerofx = Math.pow(x, 2);
+		powerofy = Math.pow(y, 2);
+		sumOfPowerXY = powerofx + powerofy;
+		distance = Math.sqrt(sumOfPowerXY);
+		return distance;
+	}
+
 }
+
