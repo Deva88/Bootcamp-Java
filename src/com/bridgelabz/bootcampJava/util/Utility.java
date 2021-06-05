@@ -34,4 +34,14 @@ public class Utility {
 
 		System.out.println(isSpring);
 	}
+	
+	public static void dice() {
+		int a = 1 + (int) (Math.random() * 6);
+        int b = 1 + (int) (Math.random() * 6);
+        int sum = a + b;
+        
+        System.out.println("First of Dice :: " +a);
+        System.out.println("Second of Dice :: " +b);
+        System.out.println("Sum of two Dice :: " +sum);
+	}
 }
