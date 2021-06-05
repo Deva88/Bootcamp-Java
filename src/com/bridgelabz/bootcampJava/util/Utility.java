@@ -25,7 +25,7 @@ public class Utility {
 			System.out.println(year + " is not a leap year");
 	}
 
-	
+
 	public static void monthDay(int month, int day) {
 		boolean isSpring =  (month == 3 && day >= 20 && day <= 31)
 				|| (month == 4 && day >=  1 && day <= 30)
@@ -34,14 +34,37 @@ public class Utility {
 
 		System.out.println(isSpring);
 	}
-	
+
 	public static void dice() {
 		int a = 1 + (int) (Math.random() * 6);
-        int b = 1 + (int) (Math.random() * 6);
-        int sum = a + b;
-        
-        System.out.println("First of Dice :: " +a);
-        System.out.println("Second of Dice :: " +b);
-        System.out.println("Sum of two Dice :: " +sum);
+		int b = 1 + (int) (Math.random() * 6);
+		int sum = a + b;
+
+		System.out.println("First of Dice :: " +a);
+		System.out.println("Second of Dice :: " +b);
+		System.out.println("Sum of two Dice :: " +sum);
+	}
+
+	public static void randomMinMax(){
+		int number = 5;
+		double random1 = Math.random();
+		double random2 = Math.random();
+		double random3 = Math.random();
+		double random4 = Math.random();
+		double random5 = Math.random();
+
+		System.out.println("Random value 1 :: " +random1);
+		System.out.println("Random value 2 :: " +random2);
+		System.out.println("Random value 3 :: " +random3);
+		System.out.println("Random value 4 :: " +random4);
+		System.out.println("Random value 5 :: " +random5);
+
+		double min     = Math.min(random1, Math.min(random2, Math.min(random3, Math.min(random4, random5))));
+		double max     = Math.max(random1, Math.max(random2, Math.max(random3, Math.max(random4, random5))));
+		double average = (random1 + random2 + random3 + random4 + random5) / number;
+
+		System.out.println("Average = " + average);
+		System.out.println("Min     = " + min);
+		System.out.println("Max     = " + max);
 	}
 }
