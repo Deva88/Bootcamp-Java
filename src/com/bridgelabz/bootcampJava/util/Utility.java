@@ -191,5 +191,17 @@ public class Utility {
 		temperatureInFahrenheit = ((temperatureInCelsius * 9) / 5) + 32;
 		return temperatureInFahrenheit;
 	}
+	
+	/*
+	 * Method is written for Find Sin and cos value
+	 */
+	public static void SinCos(double degrees) {
+		double radians = Math.toRadians(degrees);
+		double sinValue = Math.sin(radians);
+		double cosValue = Math.cos(radians);
+		
+		System.out.println("sin(" +degrees+ ") =" +sinValue);
+		System.out.println("cos(" +degrees+ ") =" +cosValue);
+	}
 }
 
