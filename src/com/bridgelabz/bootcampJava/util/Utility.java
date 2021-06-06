@@ -205,7 +205,7 @@ public class Utility {
 	}
 	
 	/*
-	 * Purpose: To Calculate Day Of a Week
+	 * To Calculate Day Of a Week
 	 * day   input taken from user
 	 * month input taken from user
 	 * year  input taken from user
@@ -219,7 +219,22 @@ public class Utility {
 		d1 = (day + x + 31 * m / 12) % 7;
 		return d1;
 	}
-
+	
+	/*
+	 * Purpose: method for finding square root using newton's law
+	 * c input from user
+	 * returns the square root
+	 */
+	public double findSquareRootUsingNewtonsMethod(int c) {
+		double t, epsilon;
+		t = c;
+		epsilon = 1e-15;
+		while (Math.abs(t - c / t) > epsilon * t) {
+			t = (c / t + t) / 2.0;
+		}
+		return t;
+	}
+	
 	
 }
 
