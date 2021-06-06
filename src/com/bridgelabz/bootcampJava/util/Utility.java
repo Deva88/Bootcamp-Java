@@ -44,6 +44,53 @@ public class Utility {
 		System.out.println("Sum of two Dice :: " +sum);
 	}
 
+	public double EuclideanDistance(int x1, int y1, int x2, int y2) {
+		double distance, powerofx, powerofy, sumOfPowerXY;
+		int x, y;
+		x = x2 - x1;
+		y = y2 - y1;
+		powerofx = Math.pow(x, 2);
+		powerofy = Math.pow(y, 2);
+		sumOfPowerXY = powerofx + powerofy;
+		distance = Math.sqrt(sumOfPowerXY);
+		return distance;
+	}
+	
+	/*
+	 * Purpose: Method is written for finding delta for Quadratic Equation
+	 * @return delta finding delta using formula
+	 */
+	public double FindDelta(int a, int b, int c) {
+		int delta = (b * b) - (4 * a * c);
+		return delta;
+	}
+	
+	/*
+	 * Purpose: Method is written for finding first Quadratic Equation
+	 * @param delta delta of a b and c
+	 * @return returns of quadratic equation answer
+	 */
+	public double QuadraticEquation1(int a, int b, double delta) {
+		double absDelta = Math.abs(delta);
+		double sqrtDelta = Math.sqrt(absDelta);
+		double equation1 = (-b + sqrtDelta) / (2 * a);
+		return equation1;
+	}
+
+	/*
+	 * Purpose: Method is written for finding second Quadratic Equation
+	 * @param delta delta of a b and c
+	 * @return returns of quadratic equation answer
+	 */
+	public double QuadraticEquation2(int a, int b, double delta) {
+		double absDelta = Math.abs(delta);
+		double sqrtDelta = Math.sqrt(absDelta);
+		double equation2 = (-b - sqrtDelta) / (2 * a);
+		return equation2;
+	}
+
+	
+	
 	//Day-2
 	public static void randomMinMax(){
 		int number = 5;
@@ -98,56 +145,30 @@ public class Utility {
 
 	public static void harmonicSeries(int num) {
 		for ( int count = 1 ; count<= num ; count++ ) {
-			System.out.print(" 1/" +count+ " + ");
-
+			if(count == num) {
+			System.out.print(" 1/" +count);
+			}
+			else
+				System.out.print(" 1/" +count+ " + ");
+		}
+	}
+	
+		/*
+		 * method for calculating wind chill
+		 * temperature in celcius
+		 * speed in velocity
+		 * @return return the calculated windchill
+		 */
+		public double CalculateWindChill(double temperature, double windspeed) {
+			double a, windChill, b, c;
+			a = 0.6215 * temperature;
+			b = 0.4275 * temperature;
+			c = b - 35.75;
+			windChill = 35.74 + a + c * (Math.pow(windspeed, 0.16));
+			// windchill cannot be negative
+			windChill = Math.abs(windChill);
+			return windChill;
 		}
 
-	}
-
-
-	public double EuclideanDistance(int x1, int y1, int x2, int y2) {
-		double distance, powerofx, powerofy, sumOfPowerXY;
-		int x, y;
-		x = x2 - x1;
-		y = y2 - y1;
-		powerofx = Math.pow(x, 2);
-		powerofy = Math.pow(y, 2);
-		sumOfPowerXY = powerofx + powerofy;
-		distance = Math.sqrt(sumOfPowerXY);
-		return distance;
-	}
-	
-	/*
-	 * Purpose: Method is written for finding delta for Quadratic Equation
-	 * @return delta finding delta using formula
-	 */
-	public double FindDelta(int a, int b, int c) {
-		int delta = (b * b) - (4 * a * c);
-		return delta;
-	}
-	
-	/*
-	 * Purpose: Method is written for finding first Quadratic Equation
-	 * @param delta delta of a b and c
-	 * @return returns of quadratic equation answer
-	 */
-	public double QuadraticEquation1(int a, int b, double delta) {
-		double absDelta = Math.abs(delta);
-		double sqrtDelta = Math.sqrt(absDelta);
-		double equation1 = (-b + sqrtDelta) / (2 * a);
-		return equation1;
-	}
-
-	/*
-	 * Purpose: Method is written for finding second Quadratic Equation
-	 * @param delta delta of a b and c
-	 * @return returns of quadratic equation answer
-	 */
-	public double QuadraticEquation2(int a, int b, double delta) {
-		double absDelta = Math.abs(delta);
-		double sqrtDelta = Math.sqrt(absDelta);
-		double equation2 = (-b - sqrtDelta) / (2 * a);
-		return equation2;
-	}
 }
 
