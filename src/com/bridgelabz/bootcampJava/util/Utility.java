@@ -55,7 +55,7 @@ public class Utility {
 		distance = Math.sqrt(sumOfPowerXY);
 		return distance;
 	}
-	
+
 	/*
 	 * Purpose: Method is written for finding delta for Quadratic Equation
 	 * @return delta finding delta using formula
@@ -64,7 +64,7 @@ public class Utility {
 		int delta = (b * b) - (4 * a * c);
 		return delta;
 	}
-	
+
 	/*
 	 * Purpose: Method is written for finding first Quadratic Equation
 	 * @param delta delta of a b and c
@@ -89,8 +89,8 @@ public class Utility {
 		return equation2;
 	}
 
-	
-	
+
+
 	//Day-2
 	public static void randomMinMax(){
 		int number = 5;
@@ -146,29 +146,50 @@ public class Utility {
 	public static void harmonicSeries(int num) {
 		for ( int count = 1 ; count<= num ; count++ ) {
 			if(count == num) {
-			System.out.print(" 1/" +count);
+				System.out.print(" 1/" +count);
 			}
 			else
 				System.out.print(" 1/" +count+ " + ");
 		}
 	}
-	
-		/*
-		 * method for calculating wind chill
-		 * temperature in celcius
-		 * speed in velocity
-		 * @return return the calculated windchill
-		 */
-		public double CalculateWindChill(double temperature, double windspeed) {
-			double a, windChill, b, c;
-			a = 0.6215 * temperature;
-			b = 0.4275 * temperature;
-			c = b - 35.75;
-			windChill = 35.74 + a + c * (Math.pow(windspeed, 0.16));
-			// windchill cannot be negative
-			windChill = Math.abs(windChill);
-			return windChill;
-		}
 
+	/*
+	 * method for calculating wind chill
+	 * temperature in celcius
+	 * speed in velocity
+	 * @return return the calculated windchill
+	 */
+	public double CalculateWindChill(double temperature, double windspeed) {
+		double a, windChill, b, c;
+		a = 0.6215 * temperature;
+		b = 0.4275 * temperature;
+		c = b - 35.75;
+		windChill = 35.74 + a + c * (Math.pow(windspeed, 0.16));
+		// windchill cannot be negative
+		windChill = Math.abs(windChill);
+		return windChill;
+	}
+
+	/**
+	 * Method is written for Converting Temperature Fahrenheit to Celsius
+	 * temperatureInFerenheit
+	 * temperatureInCelcius return temperature in celsius
+	 */
+	public double FahrenheitToCelsius(double temperatureInFerenheit) {
+		double temperatureInCelcius;
+		temperatureInCelcius = ((temperatureInFerenheit - 32) * 5) / 9;
+		return temperatureInCelcius;
+	}
+
+	/*
+	 * Method is written for Converting Temperature Celcius to Fahrenheit 
+	 * temperatureInCelsius
+	 * temperatureInFahrenheit return temperature in fahrenheit
+	 */
+	public double CelsiusToFahrenheit(double temperatureInCelsius) {
+		double temperatureInFahrenheit;
+		temperatureInFahrenheit = ((temperatureInCelsius * 9) / 5) + 32;
+		return temperatureInFahrenheit;
+	}
 }
 
