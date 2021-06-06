@@ -191,7 +191,7 @@ public class Utility {
 		temperatureInFahrenheit = ((temperatureInCelsius * 9) / 5) + 32;
 		return temperatureInFahrenheit;
 	}
-	
+
 	/*
 	 * Method is written for Find Sin and cos value
 	 */
@@ -199,9 +199,27 @@ public class Utility {
 		double radians = Math.toRadians(degrees);
 		double sinValue = Math.sin(radians);
 		double cosValue = Math.cos(radians);
-		
+
 		System.out.println("sin(" +degrees+ ") =" +sinValue);
 		System.out.println("cos(" +degrees+ ") =" +cosValue);
 	}
+	
+	/*
+	 * Purpose: To Calculate Day Of a Week
+	 * day   input taken from user
+	 * month input taken from user
+	 * year  input taken from user
+	 * @return dayOfWeek return day for week like Monday Tuesday
+	 */
+	public int calculateDayOfWeek(int day, int month, int year) {
+		int y1, x, m, d1;
+		y1 = year - (14 - month) / 12;
+		x = y1 + (y1 / 4) - (y1 / 100) + (y1 / 400);
+		m = month + 12 * ((14 - month) / 12) - 2;
+		d1 = (day + x + 31 * m / 12) % 7;
+		return d1;
+	}
+
+	
 }
 
