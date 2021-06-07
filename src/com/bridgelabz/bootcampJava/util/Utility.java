@@ -237,7 +237,7 @@ public class Utility {
 	}
 	
 	/*
-	 * Purpose: method for gambling simulation
+	 * method for gambling simulation
 	 * stake input from user
 	 * goal  input from user
 	 * times input from user
@@ -284,9 +284,9 @@ public class Utility {
 
 		System.out.println("Percentage of win : " + perOfWin);
 		System.out.println("Percentage of loose : " + perOfLose);
-
 	}
 	
-	
+
+
 }
 
