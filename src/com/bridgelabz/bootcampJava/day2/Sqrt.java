@@ -1,8 +1,12 @@
 package com.bridgelabz.bootcampJava.day2;
-
 import java.util.Scanner;
-
 import com.bridgelabz.bootcampJava.util.Utility;
+
+/*
+ * initialize t = c
+ * replace t with the average of c/t and t
+ * repeat until desired accuracy reached
+ */
 public class Sqrt {
 
 	public static void main(String[] args) {

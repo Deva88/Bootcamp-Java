@@ -227,8 +227,9 @@ public class Utility {
 	 */
 	public double findSquareRootUsingNewtonsMethod(int c) {
 		double t, epsilon;
-		t = c;
-		epsilon = 1e-15;
+		t = c;  // estimate of the square root of c
+		epsilon = 1e-15; // relative error tolerance
+		// repeatedly apply Newton update step until desired precision is achieved
 		while (Math.abs(t - c / t) > epsilon * t) {
 			t = (c / t + t) / 2.0;
 		}
