@@ -236,6 +236,57 @@ public class Utility {
 		return t;
 	}
 	
+	/*
+	 * Purpose: method for gambling simulation
+	 * stake input from user
+	 * goal  input from user
+	 * times input from user
+	 */
+	public void gamlingSimulation(int stake, int goal, int times) {
+		int tempStake = stake;
+		int tempTime = times;
+		int bets = 0;
+		int win = 0, lose = 0;
+
+		while (tempStake != 0 && tempStake != goal) {
+			if (tempTime > -1) {
+				if (tempStake != 0) {
+					if (win != goal) {
+						if (Math.random() > 0.5) {
+							tempStake++;
+							win++;
+							System.out.println("Won" + tempStake);
+						} else {
+							tempStake--;
+							lose++;
+							System.out.println("Loss" + tempStake);
+						}
+					} else {
+						System.out.println("Gamler reached to goal now withdraw money");
+						break;
+					}
+
+				} else {
+					System.out.println("Stake amount is 0 not able to play now");
+
+				}
+
+			} else {
+				System.out.println("Played n times");
+				break;
+			}
+			tempTime--;
+			bets++;
+
+		}
+		int perOfWin = win * 100 / bets;
+		int perOfLose = lose * 100 / bets;
+
+		System.out.println("Percentage of win : " + perOfWin);
+		System.out.println("Percentage of loose : " + perOfLose);
+
+	}
+	
 	
 }
 
