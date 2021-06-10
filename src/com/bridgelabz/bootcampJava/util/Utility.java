@@ -203,7 +203,7 @@ public class Utility {
 		System.out.println("sin(" +degrees+ ") =" +sinValue);
 		System.out.println("cos(" +degrees+ ") =" +cosValue);
 	}
-	
+
 	/*
 	 * To Calculate Day Of a Week
 	 * day   input taken from user
@@ -219,7 +219,7 @@ public class Utility {
 		d1 = (day + x + 31 * m / 12) % 7;
 		return d1;
 	}
-	
+
 	/*
 	 * Purpose: method for finding square root using newton's law
 	 * c input from user
@@ -235,7 +235,7 @@ public class Utility {
 		}
 		return t;
 	}
-	
+
 	/*
 	 * method for gambling simulation
 	 * stake input from user
@@ -285,61 +285,82 @@ public class Utility {
 		System.out.println("Percentage of win : " + perOfWin);
 		System.out.println("Percentage of loose : " + perOfLose);
 	}
-	
 
-	/* rollDice
-	 * 
+
+	/* Die Roll n times and suggest which
+	 *  number between 1 and 6 fall maximum number of times. 
 	 */
-	
+
 	public static void dice(int n) {
-    	int count1=0;
-    	int count2=0;
-    	int count3=0;
-    	int count4=0;
-    	int count5=0;
-    	int count6=0;
-    	
-    	while(n>0) {
-    		int random = (int) (Math.random() * 6) + 1;
-    		if(random ==1) {
-    			count1++;
-    			n--;
-    		}
-    		else if(random ==2) {
-    			count2++;
-    			n--;
-    		}
-    		else if(random ==3) {
-    			count3++;
-    			n--;
-    		}
-    		else if(random ==4) {
-    			count4++;
-    			n--;
-    		}
-    		else if(random ==5) {
-    			count5++;
-    			n--;
-    		}
-    		else {
-    			count6++;
-    			n--;
-    		}
-    	}
-    	if(count1>count2 && count1>count3 && count1>count4 && count1>count5 && count1>count6)
-        System.out.println("1 comes minmum time and occurence is " +count1);
-    	else if(count2>count3 && count2>count4 && count2>count5 && count2>count6)
-            System.out.println("2 comes minmum time and occurence is " +count2);
-    	else if( count3>count4 && count3>count5 && count3>count6)
-            System.out.println("3 comes minmum time and occurence is " +count3);
-    	else if(count4>count5 && count4>count6)
-            System.out.println("4 comes minmum time and occurence is " +count4);
-    	else if(count5>count6)
-            System.out.println("5 comes minmum time and occurence is " +count5);
-    	else 
-            System.out.println("6 comes minmum time and occurence is " +count6);
-    }
-    
+		int count1=0;
+		int count2=0;
+		int count3=0;
+		int count4=0;
+		int count5=0;
+		int count6=0;
+
+		while(n>0) {
+			int random = (int) (Math.random() * 6) + 1;
+			if(random ==1) {
+				count1++;
+				n--;
+			}
+			else if(random ==2) {
+				count2++;
+				n--;
+			}
+			else if(random ==3) {
+				count3++;
+				n--;
+			}
+			else if(random ==4) {
+				count4++;
+				n--;
+			}
+			else if(random ==5) {
+				count5++;
+				n--;
+			}
+			else {
+				count6++;
+				n--;
+			}
+		}
+		if(count1>count2 && count1>count3 && count1>count4 && count1>count5 && count1>count6)
+			System.out.println("1 comes minmum time and occurence is " +count1);
+		else if(count2>count3 && count2>count4 && count2>count5 && count2>count6)
+			System.out.println("2 comes minmum time and occurence is " +count2);
+		else if( count3>count4 && count3>count5 && count3>count6)
+			System.out.println("3 comes minmum time and occurence is " +count3);
+		else if(count4>count5 && count4>count6)
+			System.out.println("4 comes minmum time and occurence is " +count4);
+		else if(count5>count6)
+			System.out.println("5 comes minmum time and occurence is " +count5);
+		else 
+			System.out.println("6 comes minmum time and occurence is " +count6);
+	}
+
+
+	/* Java program to find the prime numbers
+	 * between a given Number
+	 */
+	public static void range(int end, int start) {
+		int count;
+		//loop for finding and printing all prime numbers between given range
+		for(int i = start ; i <= end ; i++)
+		{
+			//logic for checking number is prime or not
+			count = 0;
+			for(int j = 1 ; j <= i ; j++)	
+			{
+				if(i % j == 0)
+					count = count+1;
+			}
+			if(count == 2)
+				System.out.println(i);
+		}
+	}
+
 }
 
 
