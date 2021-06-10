@@ -1,5 +1,9 @@
 package com.bridgelabz.bootcampJava.util;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Utility {
 
 	//Day-1
@@ -17,11 +21,21 @@ public class Utility {
 	}
 
 
-	public static void leep(int year) {
-		if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
-			System.out.println( year + " is a leap year");
-		else
-			System.out.println(year + " is not a leap year");
+	/**
+	 * Purpose: method for finding year is leap or not
+	 * 
+	 * Identifier: P3LeapYear
+	 * 
+	 * @param year input taken from user
+	 */
+
+	public static void isLeapYear(int year) {
+		if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
+			System.out.println("Given year is Leap Year");
+		} else {
+			System.out.println("Given year is Not Leap Year...!");
+		}
+
 	}
 
 
@@ -211,7 +225,7 @@ public class Utility {
 	 * year  input taken from user
 	 * @return dayOfWeek return day for week like Monday Tuesday
 	 */
-	public int calculateDayOfWeek(int day, int month, int year) {
+	public static int calculateDayOfWeek(int day, int month, int year) {
 		int y1, x, m, d1;
 		y1 = year - (14 - month) / 12;
 		x = y1 + (y1 / 4) - (y1 / 100) + (y1 / 400);
@@ -342,7 +356,7 @@ public class Utility {
 
 
 	/* Java program to find the prime numbers
-	 * between a given Number
+	 * between a given Range Number
 	 */
 	public static void range(int end, int start) {
 		int count;
@@ -361,6 +375,221 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * Purpose: method for checking year is leap or not
+	 * 
+	 * @param year input from user
+	 * @return returns true if leap year else false
+	 */
+	public static boolean is_LeapYear(int year) {
+		if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0)
+			return true;
+		else
+			return false;
+	}
+	
+	/**
+	 * Purpose: print calendar on console using two dimension array
+	 * 
+	 * @param day  day of the week
+	 * @param days days of the month
+	 */
+	public static void printCalendar(int day, int days) {
+
+		String[][] cal = new String[6][7];
+		int temp;
+		String weekdaystr = "SUN MON TUE WED THU FRI SAT";
+		System.out.println(weekdaystr);
+		switch (day) {
+		case 0:
+			temp = 1;
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (temp <= 9) {
+						cal[i][j] = temp + "   ";
+					} else {
+						cal[i][j] = temp + "  ";
+					}
+					temp++;
+					if (temp == days + 1) {
+						break;
+					}
+				}
+				if (temp == days + 1) {
+					break;
+				}
+			}
+			break;
+		case 1:
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j == 0) {
+						cal[i][j] = "    ";
+					} else {
+						if (i <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
+				}
+				if (temp == days + 1) {
+					break;
+				}
+
+			}
+			break;
+		case 2:
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j == 0 || i == 0 && j == 1) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
+				}
+				if (temp == days + 1) {
+					break;
+				}
+
+			}
+			break;
+		case 3:
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j >= 0 || i == 0 && j <= 2) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
+				}
+				if (temp == days + 1) {
+					break;
+				}
+			}
+			break;
+		case 4:
+
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j >= 0 || i == 0 && j <= 3) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
+				}
+				if (temp == days + 1) {
+					break;
+				}
+			}
+			break;
+		case 5:
+
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j >= 0 || i == 0 && j <= 4) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
+				}
+				if (temp == days + 1) {
+					break;
+				}
+			}
+			break;
+		case 6:
+
+			temp = 1;
+
+			for (int i = 0; i < cal.length; i++) {
+				for (int j = 0; j < cal[i].length; j++) {
+					if (i == 0 && j >= 0 || i == 0 && j <= 5) {
+						cal[i][j] = "    ";
+					} else {
+						if (temp <= 9) {
+							cal[i][j] = temp + "   ";
+						} else {
+							cal[i][j] = temp + "  ";
+						}
+						temp++;
+					}
+					if (temp == days + 1) {
+						break;
+					}
+
+				}
+				if (temp == days + 1) {
+					break;
+				}
+			}
+			break;
+		}
+		for (int i = 0; i < cal.length; i++) {
+			for (int j = 0; j < cal[i].length; j++) {
+				if (cal[i][j] == null)
+					break;
+				System.out.print(cal[i][j]);
+
+			}
+			if (cal[i] == null)
+				break;
+			System.out.println();
+		}
+
+	}
+	
 }
 
 
