@@ -23,12 +23,12 @@ public class Calendar {
 						
 				if (isLeapYear && month == 2) {
 					days = 29;
-					day = Utility.calculateDayOfWeek(1, month, year);
+					day = Utility.calculateDay_Of_Week(1, month, year);
 					Utility.printCalendar(day, days);
 
 				} else {
 					days = daysPerYear[month - 1];
-					day = Utility.calculateDayOfWeek(1, month, year);
+					day = Utility.calculateDay_Of_Week(1, month, year);
 					Utility.printCalendar(day, days);
 				}
 			} else
