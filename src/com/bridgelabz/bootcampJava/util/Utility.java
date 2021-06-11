@@ -387,8 +387,8 @@ public class Utility {
 		else
 			return false;
 	}
-	
-	
+
+
 	public static int calculateDay_Of_Week(int day, int month, int year) {
 		int y1, x, m, d1;
 		y1 = year - (14 - month) / 12;
@@ -398,10 +398,10 @@ public class Utility {
 		return d1;
 	}
 
-	
-	
-	
-	
+
+
+
+
 	/**
 	 * print calendar on console using two dimension array
 	 * day of the week
@@ -594,13 +594,11 @@ public class Utility {
 				if (cal[i][j] == null)
 					break;
 				System.out.print(cal[i][j]);
-
 			}
 			if (cal[i] == null)
 				break;
 			System.out.println();
 		}
-
 	}
 
 
@@ -624,7 +622,7 @@ public class Utility {
 		}
 		return false;
 	}
-	
+
 }
 
 

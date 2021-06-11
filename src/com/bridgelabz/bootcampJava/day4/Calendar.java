@@ -4,9 +4,7 @@ import java.util.Scanner;
 import com.bridgelabz.bootcampJava.util.Utility;
 
 public class Calendar {
-
 	public static void main(String[] args) {
-
 		Scanner scanner = new Scanner(System.in);
 		int year, month;
 		boolean isLeapYear;
@@ -35,7 +33,6 @@ public class Calendar {
 				System.out.println("please enter valid year");
 		} else
 			System.out.println("Please enter valid month");
-
 		scanner.close();
 	}
 
