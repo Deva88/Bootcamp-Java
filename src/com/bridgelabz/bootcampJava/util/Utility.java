@@ -630,14 +630,22 @@ public class Utility {
 	 * return a sin of an angle
 	 */
 	
-	public static void isSin(double degrees) {
-		double radians = Math.toRadians(degrees);
+	public static void isSin(double degreesSin) {
+		double radians = Math.toRadians(degreesSin);
 		double sinValue = Math.sin(radians);
 
-		System.out.println();
-		System.out.println("sin(" +degrees+ ") =" +sinValue);
+		System.out.println("sin(" +degreesSin+ ") =" +sinValue);
 	}
 
+	/*
+	 * return a Cos of an angle
+	 */
+	
+	public static void isCos(double degreesCos) {
+		double radians = Math.toRadians(degreesCos);
+		double cosValue = Math.cos(radians);
+		System.out.println("sin(" +degreesCos+ ") =" +cosValue);
+	}
 	
 	 }
 
