@@ -10,6 +10,7 @@ public class Calendar {
 		boolean isLeapYear;
 		int days;
 		int day;
+		
 		int[] daysPerYear = { 31, 28, 30, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		System.out.println("Enter month");
 		month = scanner.nextInt();
