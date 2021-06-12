@@ -214,7 +214,8 @@ public class Utility {
 		double radians = Math.toRadians(degrees);
 		double sinValue = Math.sin(radians);
 		double cosValue = Math.cos(radians);
-
+		
+		System.out.println();
 		System.out.println("sin(" +degrees+ ") =" +sinValue);
 		System.out.println("cos(" +degrees+ ") =" +cosValue);
 	}
@@ -622,7 +623,22 @@ public class Utility {
 		}
 		return false;
 	}
+	
+	//Day-5
+	
+	/*
+	 * return a sin of an angle
+	 */
+	
+	public static void isSin(double degrees) {
+		double radians = Math.toRadians(degrees);
+		double sinValue = Math.sin(radians);
 
-}
+		System.out.println();
+		System.out.println("sin(" +degrees+ ") =" +sinValue);
+	}
+
+	
+	 }
 
 

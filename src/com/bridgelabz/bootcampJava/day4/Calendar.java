@@ -18,7 +18,7 @@ public class Calendar {
 			year = scanner.nextInt();
 			if (year > 1582 && year < 9999) {
 				isLeapYear = Utility.is_LeapYear(year);
-						
+
 				if (isLeapYear && month == 2) {
 					days = 29;
 					day = Utility.calculateDay_Of_Week(1, month, year);
