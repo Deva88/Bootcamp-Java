@@ -390,6 +390,7 @@ public class Utility {
 	}
 
 
+	
 	public static int calculateDay_Of_Week(int day, int month, int year) {
 		int y1, x, m, d1;
 		y1 = year - (14 - month) / 12;
