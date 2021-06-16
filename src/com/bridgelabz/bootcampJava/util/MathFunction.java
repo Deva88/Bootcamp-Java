@@ -1,5 +1,8 @@
 package com.bridgelabz.bootcampJava.util;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class MathFunction {
 
 	//Day-5
@@ -66,5 +69,23 @@ public class MathFunction {
 			System.out.println("The factorial of the number is: " + factorial);
 		}
 		return factorial;
+	}
+	/*
+	 * Return max and min value
+	 */
+
+	public static int minMax() {
+		Integer[] num = { 30, 44, 57, 25, 89 };
+		int minValue = Collections.min(Arrays.asList(num));
+		int maxValue = Collections.max(Arrays.asList(num));
+		System.out.println("Minimum number of array is : "
+				+ minValue);
+
+		System.out.println("Maximum number of array is : "
+				+ maxValue);
+
+		return 0;
+
+
 	}
 }
