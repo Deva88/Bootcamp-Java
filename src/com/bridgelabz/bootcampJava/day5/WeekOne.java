@@ -1,8 +1,9 @@
 package com.bridgelabz.bootcampJava.day5;
 
 import java.util.Scanner;
-import com.bridgelabz.bootcampJava.util.Utility;
-public class MathFunction {
+
+import com.bridgelabz.bootcampJava.util.MathFunction;
+ class WeekOne {
 
 	public static void main(String[] args) {
 		
@@ -12,19 +13,19 @@ public class MathFunction {
 		System.out.println("Enter n for Harmonic Series");
 		int num=scanner.nextInt();
 		System.out.print("H" +num+ " = ");
-		Utility.harmonicSeries(num);
+		MathFunction.harmonicSeries(num);
 		
 		//return a sin of an angle
 		System.out.println(" ");
 		System.out.print("Enter Sin Angle : ");
 		double degreesSin=scanner.nextInt();
-		Utility.isSin(degreesSin);
+		MathFunction.isSin(degreesSin);
 		
 		//return a Cos of an angle
 		System.out.println(" ");
 		System.out.print("Enter Cos Angle : ");
 		double degreesCos=scanner.nextInt();
-		Utility.isCos(degreesCos);
+		MathFunction.isCos(degreesCos);
 		
 		//To return Binary of a number
 		System.out.println(" ");
