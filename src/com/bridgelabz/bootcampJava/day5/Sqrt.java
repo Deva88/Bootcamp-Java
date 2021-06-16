@@ -3,7 +3,6 @@ package com.bridgelabz.bootcampJava.day5;
 import java.util.Scanner;
 import com.bridgelabz.bootcampJava.util.Utility;
 public class Sqrt {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Utility utility=new Utility();
