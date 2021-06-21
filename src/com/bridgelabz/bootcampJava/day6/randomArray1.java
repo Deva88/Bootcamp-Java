@@ -1,6 +1,6 @@
 package com.bridgelabz.bootcampJava.day6;
-
 import java.util.Random;
+
 public class randomArray1{
 	public static void main(String[] args) {
 		Integer[] val = new Integer[1];
