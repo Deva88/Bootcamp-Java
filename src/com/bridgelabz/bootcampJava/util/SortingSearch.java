@@ -1,7 +1,6 @@
 package com.bridgelabz.bootcampJava.util;
 
 public class SortingSearch {
-		
 	/*
 	 * Purpose: method for printing integer array 
 	 * @param arr array from user
