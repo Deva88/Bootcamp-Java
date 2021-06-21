@@ -1,6 +1,6 @@
 package com.bridgelabz.bootcampJava.day7;
-
 public class StandardDeviation {
+	
     public static void main(String[] args) {
         double[] numArray = { 10, 20, 30, 40, 50, 60, 40, 30, 20, 10 };
         double SD = calculateSD(numArray);
