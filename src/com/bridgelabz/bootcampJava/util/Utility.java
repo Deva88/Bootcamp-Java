@@ -634,6 +634,24 @@ public class Utility {
 		String username = "<<username>>";
 		return username.replaceAll("<<username>>", input);
 	}
+	
+	/**
+	 * Purpose: method for finding prime number or not
+	 * @param num input from user
+	 * @return returns true if prime else not prime
+	 */
+	public static boolean isPrime(int num) {
+		if (num == 0 || num == 1) {
+			return false;
+		}
+		for (int i = 2; i < num; i++) {
+			if (num % i == 0) {
+				return false;
+			}
+		}
+		return true;
+
+	}
 
 }
 
