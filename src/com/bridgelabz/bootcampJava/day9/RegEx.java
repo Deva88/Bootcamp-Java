@@ -1,8 +1,8 @@
 package com.bridgelabz.bootcampJava.day9;
 import java.util.Scanner;
 import com.bridgelabz.bootcampJava.util.Utility;
-public class RegEx {
 
+public class RegEx {
 	public static void main(String[] args) {
 		Utility utility = new Utility();
 		Scanner scanner = new Scanner(System.in);
