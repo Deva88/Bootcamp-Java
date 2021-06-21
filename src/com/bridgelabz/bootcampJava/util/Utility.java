@@ -624,6 +624,16 @@ public class Utility {
 		}
 		return false;
 	}	
+	
+	/*
+	 * Purpose: for replacing the regular expression into string given by user
+	 * @param input taken from user
+	 * @return replaced string will return
+	 */
+	public String regexUsername(String input) {
+		String username = "<<username>>";
+		return username.replaceAll("<<username>>", input);
+	}
 
 }
 
