@@ -610,7 +610,7 @@ public class Utility {
 	 * str2 input from user
 	 * true or false depending upon anagram or not
 	 */
-	public boolean isAnagram(String str1, String str2) {
+	public static boolean isAnagram(String str1, String str2) {
 		char[] arr1 = str1.toCharArray();
 		char[] arr2 = str2.toCharArray();
 		if (str1.length() != str2.length()) {
@@ -650,9 +650,7 @@ public class Utility {
 			}
 		}
 		return true;
-
 	}
-
 }
 
 
