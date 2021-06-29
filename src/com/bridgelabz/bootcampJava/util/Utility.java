@@ -652,9 +652,8 @@ public class Utility {
 		return true;
 	}
 
-	/**
+	/*
 	 * Purpose: method for finding Harmonic series
-	 * Identifier: P5HarmonicSerie
 	 * @param range input taken from user
 	 */
 	public void harmonic(int range) {
@@ -672,6 +671,28 @@ public class Utility {
 		}
 		System.out.println();
 		System.out.print("H(" + range + ")" + " = " + sum);
+
+	}
+	
+	/*
+	 * Purpose: method for finding triplets
+	 * @param arr input from user
+	 */
+	public void sumOfThreeIsZero(int[] arr) {
+		System.out.println("Array : ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < arr.length - 2; i++) {
+			for (int j = i + 1; j < arr.length - 1; j++) {
+				for (int k = j + 1; k < arr.length; k++) {
+					if (arr[i] + arr[j] + arr[k] == 0) {
+						System.out.println(arr[i] + " " + arr[j] + " " + arr[k] + " is distinct triplets");
+					}
+				}
+			}
+		}
 
 	}
 }
