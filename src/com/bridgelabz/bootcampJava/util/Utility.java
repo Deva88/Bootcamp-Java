@@ -214,7 +214,7 @@ public class Utility {
 		double radians = Math.toRadians(degrees);
 		double sinValue = Math.sin(radians);
 		double cosValue = Math.cos(radians);
-		
+
 		System.out.println();
 		System.out.println("sin(" +degrees+ ") =" +sinValue);
 		System.out.println("cos(" +degrees+ ") =" +cosValue);
@@ -390,7 +390,7 @@ public class Utility {
 	}
 
 
-	
+
 	public static int calculateDay_Of_Week(int day, int month, int year) {
 		int y1, x, m, d1;
 		y1 = year - (14 - month) / 12;
@@ -624,7 +624,7 @@ public class Utility {
 		}
 		return false;
 	}	
-	
+
 	/*
 	 * Purpose: for replacing the regular expression into string given by user
 	 * @param input taken from user
@@ -634,7 +634,7 @@ public class Utility {
 		String username = "<<username>>";
 		return username.replaceAll("<<username>>", input);
 	}
-	
+
 	/**
 	 * Purpose: method for finding prime number or not
 	 * @param num input from user
@@ -650,6 +650,29 @@ public class Utility {
 			}
 		}
 		return true;
+	}
+
+	/**
+	 * Purpose: method for finding Harmonic series
+	 * Identifier: P5HarmonicSerie
+	 * @param range input taken from user
+	 */
+	public void harmonic(int range) {
+
+		double sum = 0;
+		for (int i = 1; i <= range; i++) {
+			if (i != range) {
+				System.out.print((double) 1 / i);
+				System.out.print(" + ");
+				sum += (double) 1 / i;
+			} else {
+				System.out.print((double) 1 / i);
+				sum += (double) 1 / i;
+			}
+		}
+		System.out.println();
+		System.out.print("H(" + range + ")" + " = " + sum);
+
 	}
 }
 
